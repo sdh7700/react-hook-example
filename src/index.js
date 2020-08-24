@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import useAxios from './useAxios.js/useAxios';
+import UseReducer from './useReducer/UseReducer';
+import UseContext from './useContext/UseContext';
 
 const App = () => {
     const {loading, data, error} = useAxios({url:"https://yts.mx/api/v2/list_movies.json"});
     console.log(`Loading: ${loading}\nError:${error}\nData:${JSON.stringify(data)}`);
     return (
         <div>
-            <h1>Hello</h1>
+            <h1>Hell?o</h1>
         </div>
     );
 }
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<UseContext />, document.getElementById("root"));
 
 // // thi si
 // ReactDOM.render(
